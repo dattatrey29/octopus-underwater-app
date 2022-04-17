@@ -28,8 +28,8 @@ pipeline {
             steps {
                 script{
                         docker.withRegistry('449025498404.dkr.ecr.ap-south-1.amazonaws.com/underwater', 'ecr:ap-south-1:aws-kainskep') {
-                        def myImage = docker.buid('underwater')
-                            myImage.push('latest')
+                        app.push("${env.BUILD_NUMBER}")
+                        app.push("latest")
                     }
                 }
             }
