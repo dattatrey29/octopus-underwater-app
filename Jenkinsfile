@@ -36,8 +36,8 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                 sh 'kubectl apply -f deployment.yml'
-                 sh 'kubectl rollout restart deployment ecr-app-underwater'
+                 bat 'kubectl apply -f deployment.yml'
+                 bat 'kubectl rollout restart deployment ecr-app-underwater'
             }
         }
         
