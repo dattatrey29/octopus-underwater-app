@@ -28,7 +28,6 @@ pipeline {
             steps {
                 script{
                         docker.withRegistry('https://449025498404.dkr.ecr.ap-south-1.amazonaws.com', 'ecr:ap-south-1:aws-kainskep') {
-                    app.push("${env.BUILD_NUMBER}")
                     app.push("latest")
                     }
                 }
